@@ -1,0 +1,157 @@
+execve("/mnt/c/Windows/system32/cmd.exe", ["cmd.exe", "/C", "main.bat"], 0x7ffce3ed1e60 /* 21 vars */) = 0
+arch_prctl(ARCH_SET_FS, 0x29c800)       = 0
+set_tid_address(0x29c838)               = 184
+brk(NULL)                               = 0x1c90000
+brk(0x1c91000)                          = 0x1c91000
+sched_getaffinity(0, 128, [0, 1, 2, 3, 4, 5]) = 32
+getpid()                                = 184
+getcwd("/mnt/c/Users/ff129/Desktop/FCU_Operating_Systems/Exercise1/2.26", 4096) = 64
+uname({sysname="Linux", nodename="K139", ...}) = 0
+getcwd("/mnt/c/Users/ff129/Desktop/FCU_Operating_Systems/Exercise1/2.26", 4096) = 64
+open("/mnt/c/Windows/system32/cmd.exe", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_PATH) = 3
+readlink("/proc/self/fd/3", "/mnt/c/Windows/system32/cmd.exe", 4095) = 31
+fstat(3, {st_mode=S_IFREG|0555, st_size=289792, ...}) = 0
+stat("/mnt/c/Windows/system32/cmd.exe", {st_mode=S_IFREG|0555, st_size=289792, ...}) = 0
+close(3)                                = 0
+open("/proc/self/mountinfo", O_RDONLY)  = 3
+readv(3, [{iov_base="", iov_len=0}, {iov_base="33 24 8:16 / / rw,relatime - ext"..., iov_len=1024}], 2) = 1024
+readv(3, [{iov_base="", iov_len=0}, {iov_base="e=755\n46 45 0:28 / /sys/fs/cgrou"..., iov_len=1024}], 2) = 1024
+readv(3, [{iov_base="", iov_len=0}, {iov_base="roup cgroup rw,net_prio\n57 45 0:"..., iov_len=1024}], 2) = 460
+readv(3, [{iov_base="", iov_len=0}, {iov_base="", iov_len=1024}], 2) = 0
+close(3)                                = 0
+getcwd("/mnt/c/Users/ff129/Desktop/FCU_Operating_Systems/Exercise1/2.26", 4096) = 64
+open("/proc/self/mountinfo", O_RDONLY)  = 3
+readv(3, [{iov_base="", iov_len=0}, {iov_base="33 24 8:16 / / rw,relatime - ext"..., iov_len=1024}], 2) = 1024
+readv(3, [{iov_base="", iov_len=0}, {iov_base="e=755\n46 45 0:28 / /sys/fs/cgrou"..., iov_len=1024}], 2) = 1024
+readv(3, [{iov_base="", iov_len=0}, {iov_base="roup cgroup rw,net_prio\n57 45 0:"..., iov_len=1024}], 2) = 460
+readv(3, [{iov_base="", iov_len=0}, {iov_base="", iov_len=1024}], 2) = 0
+close(3)                                = 0
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(0, TIOCGPGRP, [182])              = 0
+getpgid(0)                              = 182
+fstat(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 2), ...}) = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 2), ...}) = 0
+fstat(2, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 2), ...}) = 0
+ioctl(0, TIOCGWINSZ, {ws_row=30, ws_col=120, ws_xpixel=0, ws_ypixel=0}) = 0
+ioctl(0, SNDCTL_TMR_START or TCSETS, {B38400 -opost -isig -icanon -echo ...}) = 0
+dup(0)                                  = 3
+socket(AF_VSOCK, SOCK_STREAM|SOCK_CLOEXEC, 0) = 4
+bind(4, {sa_family=AF_VSOCK, sa_data="\0\0\377\377\377\377\377\377\377\377\0\0\0\0"}, 16) = 0
+getsockname(4, {sa_family=AF_VSOCK, sa_data="\0\0\25\4\0\0\377\377\377\377\0\0\0\0"}, [16]) = 0
+listen(4, 4)                            = 0
+socket(AF_UNIX, SOCK_SEQPACKET, 0)      = 5
+connect(5, {sa_family=AF_UNIX, sun_path="/run/WSL/139_interop"}, 110) = 0
+write(5, "\6\0\0\0T\1\0\0\25\4\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 340) = 340
+accept4(4, {sa_family=AF_VSOCK, sa_data="\0\0$\0\0\200\377\377\377\377\0\0\0\0"}, [16], SOCK_CLOEXEC) = 6
+accept4(4, {sa_family=AF_VSOCK, sa_data="\0\0%\0\0\200\377\377\377\377\0\0\0\0"}, [16], SOCK_CLOEXEC) = 7
+accept4(4, {sa_family=AF_VSOCK, sa_data="\0\0&\0\0\200\377\377\377\377\0\0\0\0"}, [16], SOCK_CLOEXEC) = 8
+accept4(4, {sa_family=AF_VSOCK, sa_data="\0\0'\0\0\200\377\377\377\377\0\0\0\0"}, [16], SOCK_CLOEXEC) = 9
+close(4)                                = 0
+rt_sigprocmask(SIG_BLOCK, [INT WINCH], NULL, 8) = 0
+signalfd4(-1, [INT WINCH], 8, 0)        = 4
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=9, revents=POLLIN}])
+recvfrom(9, "\t\0\0\0 \0\0\0", 8, MSG_WAITALL, NULL, NULL) = 8
+brk(0x1c93000)                          = 0x1c93000
+recvfrom(9, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0", 24, 0, NULL, NULL) = 24
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=7, revents=POLLIN}])
+poll([{fd=7, events=POLLIN}], 1, -1)    = 1 ([{fd=7, revents=POLLIN}])
+read(7, "\33[6n", 4096)                 = 4
+write(1, "\33[6n", 4)                   = 4
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=0, revents=POLLIN}])
+poll([{fd=0, events=POLLIN}], 1, -1)    = 1 ([{fd=0, revents=POLLIN}])
+read(0, "\33[3;1R", 4096)               = 6
+write(6, "\33[3;1R", 6)                 = 6
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=7, revents=POLLIN}])
+poll([{fd=7, events=POLLIN}], 1, -1)    = 1 ([{fd=7, revents=POLLIN}])
+read(7, "\33[m\33]0;C:\\Windows\\system32\\cmd.e"..., 4096) = 41
+write(1, "\33[m\33]0;C:\\Windows\\system32\\cmd.e"..., 41) = 41
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=7, revents=POLLIN}])
+poll([{fd=7, events=POLLIN}], 1, -1)    = 1 ([{fd=7, revents=POLLIN}])
+read(7, "\r\nC:\\Users\\ff129\\Desktop\\FCU_Ope"..., 4096) = 73
+write(1, "\r\nC:\\Users\\ff129\\Desktop\\FCU_Ope"..., 73) = 73
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=7, revents=POLLIN}])
+poll([{fd=7, events=POLLIN}], 1, -1)    = 1 ([{fd=7, revents=POLLIN}])
+read(7, "\33[25l\33[HActive code page: 65001\33"..., 4096) = 214
+write(1, "\33[25l\33[HActive code page: 65001\33"..., 214) = 214
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=0, revents=POLLIN}])
+poll([{fd=0, events=POLLIN}], 1, -1)    = 1 ([{fd=0, revents=POLLIN}])
+read(0, "n", 4096)                      = 1
+write(6, "n", 1)                        = 1
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=7, revents=POLLIN}])
+poll([{fd=7, events=POLLIN}], 1, -1)    = 1 ([{fd=7, revents=POLLIN}])
+read(7, "n", 4096)                      = 1
+write(1, "n", 1)                        = 1
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=0, revents=POLLIN}])
+poll([{fd=0, events=POLLIN}], 1, -1)    = 1 ([{fd=0, revents=POLLIN}])
+read(0, "o", 4096)                      = 1
+write(6, "o", 1)                        = 1
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=7, revents=POLLIN}])
+poll([{fd=7, events=POLLIN}], 1, -1)    = 1 ([{fd=7, revents=POLLIN}])
+read(7, "o", 4096)                      = 1
+write(1, "o", 1)                        = 1
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=0, revents=POLLIN}])
+poll([{fd=0, events=POLLIN}], 1, -1)    = 1 ([{fd=0, revents=POLLIN}])
+read(0, ".", 4096)                      = 1
+write(6, ".", 1)                        = 1
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=7, revents=POLLIN}])
+poll([{fd=7, events=POLLIN}], 1, -1)    = 1 ([{fd=7, revents=POLLIN}])
+read(7, ".", 4096)                      = 1
+write(1, ".", 1)                        = 1
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=0, revents=POLLIN}])
+poll([{fd=0, events=POLLIN}], 1, -1)    = 1 ([{fd=0, revents=POLLIN}])
+read(0, "t", 4096)                      = 1
+write(6, "t", 1)                        = 1
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=7, revents=POLLIN}])
+poll([{fd=7, events=POLLIN}], 1, -1)    = 1 ([{fd=7, revents=POLLIN}])
+read(7, "t", 4096)                      = 1
+write(1, "t", 1)                        = 1
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=0, revents=POLLIN}])
+poll([{fd=0, events=POLLIN}], 1, -1)    = 1 ([{fd=0, revents=POLLIN}])
+read(0, "x", 4096)                      = 1
+write(6, "x", 1)                        = 1
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=7, revents=POLLIN}])
+poll([{fd=7, events=POLLIN}], 1, -1)    = 1 ([{fd=7, revents=POLLIN}])
+read(7, "x", 4096)                      = 1
+write(1, "x", 1)                        = 1
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=0, revents=POLLIN}])
+poll([{fd=0, events=POLLIN}], 1, -1)    = 1 ([{fd=0, revents=POLLIN}])
+read(0, "t", 4096)                      = 1
+write(6, "t", 1)                        = 1
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=7, revents=POLLIN}])
+poll([{fd=7, events=POLLIN}], 1, -1)    = 1 ([{fd=7, revents=POLLIN}])
+read(7, "t", 4096)                      = 1
+write(1, "t", 1)                        = 1
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=0, revents=POLLIN}])
+poll([{fd=0, events=POLLIN}], 1, -1)    = 1 ([{fd=0, revents=POLLIN}])
+read(0, "\r", 4096)                     = 1
+write(6, "\r", 1)                       = 1
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=7, revents=POLLIN}])
+poll([{fd=7, events=POLLIN}], 1, -1)    = 1 ([{fd=7, revents=POLLIN}])
+read(7, "\r\n", 4096)                   = 2
+write(1, "\r\n", 2)                     = 2
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=7, revents=POLLIN}])
+poll([{fd=7, events=POLLIN}], 1, -1)    = 1 ([{fd=7, revents=POLLIN}])
+read(7, "\"\347\250\213\345\274\217\347\265\220\346\235\237\"\r\n", 4096) = 16
+write(1, "\"\347\250\213\345\274\217\347\265\220\346\235\237\"\r\n", 16) = 16
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, -1) = 1 ([{fd=9, revents=POLLIN}])
+recvfrom(9, "\7\0\0\0\f\0\0\0", 8, MSG_WAITALL, NULL, NULL) = 8
+recvfrom(9, "\0\0\0\0", 4, 0, NULL, NULL) = 4
+poll([{fd=0, events=POLLIN}, {fd=7, events=POLLIN}, {fd=8, events=POLLIN}, {fd=9, events=POLLIN}, {fd=4, events=POLLIN}], 5, 0) = 3 ([{fd=7, revents=POLLIN}, {fd=8, revents=POLLIN}, {fd=9, revents=POLLIN}])
+poll([{fd=7, events=POLLIN}], 1, -1)    = 1 ([{fd=7, revents=POLLIN}])
+read(7, "", 4096)                       = 0
+poll([{fd=8, events=POLLIN}], 1, -1)    = 1 ([{fd=8, revents=POLLIN}])
+read(8, "", 4096)                       = 0
+recvfrom(9, "", 8, MSG_WAITALL, NULL, NULL) = 0
+poll([{fd=0, events=POLLIN}, {fd=-1}, {fd=-1}, {fd=-1}, {fd=4, events=POLLIN}], 5, 0) = 0 (Timeout)
+close(5)                                = 0
+close(4)                                = 0
+close(6)                                = 0
+close(7)                                = 0
+close(8)                                = 0
+close(9)                                = 0
+ioctl(3, SNDCTL_TMR_START or TCSETS, {B38400 opost isig icanon echo ...}) = 0
+close(3)                                = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
